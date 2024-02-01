@@ -10,6 +10,8 @@ key=$(jq -r '.SSHKey' options.json)
 mountAttempts=0
 mountFailures=0
 
+mount -a
+
 copyKeyToDevicePartition() {
   partition="/dev/${1}"
   tmp_path="/tmp/${1}"
